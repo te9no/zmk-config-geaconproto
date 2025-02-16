@@ -1,0 +1,2 @@
+config SHIELD_GEACON_JIS
+  def_bool $(shields_list_contains,geacon_JIS)

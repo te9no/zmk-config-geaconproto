@@ -1,0 +1,69 @@
+#include <dt-bindings/zmk/bt.h>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include "geacon_pinctrl.dtsi"
+#include "geacon.dtsi"
+
+&spi0 {
+    status = "okay";
+    cs-gpios =  <&xiao_d 0 GPIO_ACTIVE_LOW>, <&xiao_d 1 GPIO_ACTIVE_LOW>;
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    compatible = "nordic,nrf-spim";
+
+    trackball: pd@0 {
+        status = "okay";
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+  	    cpi = <600>;
+        spi-max-frequency = <1000000>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+        irq-gpios = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+
+    shifter: mcp23sxx@1 {
+        status = "okay";
+        compatible = "microchip,mcp23sxx";
+        gpio-controller;
+        spi-max-frequency = <1000000>;
+        reg = <1>;
+        label = "MCP23S17";
+        #gpio-cells = <2>;
+        ngpios = <16>;
+        int-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-charlieplex";
+        interrupt-gpios = <&xiao_d 7 (GPIO_ACTIVE_LOW)>;
+        gpios
+            = <&shifter 0 (GPIO_ACTIVE_LOW)>
+            , <&shifter 1 (GPIO_ACTIVE_LOW)>
+            , <&shifter 2 (GPIO_ACTIVE_LOW)>
+            , <&shifter 3 (GPIO_ACTIVE_LOW)>
+            , <&shifter 4 (GPIO_ACTIVE_LOW)>
+            , <&shifter 5 (GPIO_ACTIVE_LOW)>
+            , <&shifter 6 (GPIO_ACTIVE_LOW)>
+            , <&shifter 7 (GPIO_ACTIVE_LOW)>
+            , <&shifter 8 (GPIO_ACTIVE_LOW)>
+            , <&shifter 9 (GPIO_ACTIVE_LOW)>
+            ;
+    };
+};
+
+/ {
+  trackball_listener {
+    status = "okay";
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+    input-processors = <&zip_temp_layer 3 1000>;
+    scroll {
+      layers = <2>;
+      input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 16>, <&zip_xy_to_scroll_mapper>;
+    };
+
+  };
+};

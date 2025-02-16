@@ -1,0 +1,7 @@
+if SHIELD_GEACON_JIS
+  config ZMK_KEYBOARD_NAME
+  default "geacon_JIS"
+endif
+
+config SPI
+    default y

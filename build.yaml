@@ -1,0 +1,13 @@
+---
+include:
+#  - board: seeeduino_xiao_ble
+#    shield: geacon_jis
+#    snippet: zmk-usb-logging studio-rpc-usb-uart
+#    snippet: studio-rpc-usb-uart
+#    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: seeeduino_xiao_ble
+    shield: geacon rgbled_adapter
+    snippet: zmk-usb-logging studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
