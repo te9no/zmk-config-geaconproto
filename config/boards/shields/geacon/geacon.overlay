@@ -11,7 +11,8 @@
 };
 
 &spi0 {
-    status = "okay";
+    status = "disabled"; // Disable I2C0 to resolve conflict
+
     cs-gpios =  <&xiao_d 0 GPIO_ACTIVE_LOW>, <&xiao_d 1 GPIO_ACTIVE_LOW>;
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
@@ -61,11 +62,12 @@
 };
 
 &i2c0 {
-	  status = "okay";
+    compatible = "nordic,nrf-twim"; // I2C controller instead of generic
 
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
+    clock-frequency = <I2C_BITRATE_FAST>;
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
