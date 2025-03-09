@@ -54,15 +54,12 @@
     };
 };
 
-display_i2c: &i2c1 {
+&i2c1 {
+    status = "okay";
     compatible = "nordic,nrf-twi";
     pinctrl-0 = <&i2c1_default>;
     pinctrl-1 = <&i2c1_sleep>;
     pinctrl-names = "default", "sleep";
- };
-
-&display_i2c {
-    status = "okay";
     
     clock-frequency = <100000>; 
     oled: ssd1306@3c {
@@ -83,9 +80,9 @@ display_i2c: &i2c1 {
 };
 
 / {
-    chosen {
-        zephyr,display = &oled;
-    };
+  chosen {
+      zephyr,display = &oled;
+  };
 
   trackball_listener {
     status = "okay";
