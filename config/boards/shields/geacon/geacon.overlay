@@ -80,6 +80,10 @@
 };
 
 / {
+    chosen {
+        zephyr,display = &oled;
+    };
+
   trackball_listener {
     status = "okay";
     compatible = "zmk,input-listener";
