@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: badjeff
       url-base: https://github.com/badjeff
+    - name: te9no
+      url-base: https://github.com/te9no
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -19,5 +21,8 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: main
+    - name: zmk-dongle-display
+      remote: te9no
+      revision: test
   self:
     path: config
