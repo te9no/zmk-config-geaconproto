@@ -158,7 +158,6 @@
        };
 
        mouse_layer {
-           display-name = "MOUSE";    
            label = "MOUSE";
            bindings = <
 &trans        &trans     &trans     &trans     &trans     &trans       &trans    &trans     &trans     &trans     &trans    &trans     &trans          &trans
@@ -170,7 +169,6 @@
        };
 
        scroll_layer {
-           display-name = "SCROLL";    
            label = "SCROLL";
            bindings = <
 &trans        &trans     &trans     &trans     &trans     &trans       &trans    &trans     &trans     &trans     &trans    &trans     &trans          &trans
@@ -182,7 +180,6 @@
        };
 
         bt_layer {
-           display-name = "BT";    
            label = "BT";
            bindings = <
 &bt BT_CLR     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans
