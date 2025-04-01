@@ -3,10 +3,10 @@
 
 / {
   chosen {
-    zmk,physical-layout = &geacon_physical_layout;
+    zmk,physical-layout = &Solkatstice_physical_layout;
   };
 
-  geacon_physical_layout: geacon_physical_layout {
+  Solkatstice_physical_layout: Solkatstice_physical_layout {
       compatible = "zmk,physical-layout";
       display-name = "Default";
       transform = <&default_transform>;

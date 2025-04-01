@@ -1,8 +1,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
-#include "geacon_pinctrl.dtsi"
-#include "geacon.dtsi"
+#include "Solkatstice_pinctrl.dtsi"
+#include "Solkatstice.dtsi"
 
 &spi0 {
     status = "okay";

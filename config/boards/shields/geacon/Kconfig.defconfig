@@ -1,6 +1,6 @@
-if SHIELD_GEACON
+if SHIELD_SOLKATSTICE
     config ZMK_KEYBOARD_NAME
-    default "geacon"
+    default "Solkatstice"
 
     config SPI
         default y
