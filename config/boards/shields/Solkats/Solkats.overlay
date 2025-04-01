@@ -2,7 +2,7 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include "Solkats_pinctrl.dtsi"
-#include "Solkats.dtsi"
+#include "solkats.dtsi"
 
 &spi0 {
     status = "okay";
