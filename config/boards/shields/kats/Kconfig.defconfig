@@ -1,6 +1,6 @@
-if SHIELD_SOLKATS
+if SHIELD_KATS
     config ZMK_KEYBOARD_NAME
-    default "solkats"
+    default "kats"
 
     config SPI
         default y
