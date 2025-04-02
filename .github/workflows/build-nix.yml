@@ -1,10 +1,10 @@
 name: Build ZMK firmware (nix)
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - config/**
-      - build.yaml
+  # push:
+  #   paths:
+  #     - config/**
+  #     - build.yaml
 
 jobs:
   build:
@@ -12,6 +12,6 @@ jobs:
     with:
       # Optionally choose the toolchain to use: Zephyr SDK (default) or GNU Arm
       # Embedded ('gnuarmemb'). The latter results in slightly faster builds.
-      # toolchain: zephyr
-      toolchain: gnuarmemb
+      toolchain: zephyr
+      # toolchain: gnuarmemb
       
