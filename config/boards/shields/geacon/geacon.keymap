@@ -26,13 +26,13 @@
             compatible = "zmk,behavior-macro";
             label = "mESC";
             #binding-cells = <0>;
-            bindings = <&kp ESC>;
+            bindings = <&macro_tap &kp ESC>;
         };
         mENT: mENT {
             compatible = "zmk,behavior-macro";
             label = "mENT";
             #binding-cells = <0>;
-            bindings = <&kp ENTER>;
+            bindings = <&macro_tap &kp ENTER>;
         };
     };
 
@@ -40,8 +40,14 @@
         leader1: leader1 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            leftdown { sequence = <E S C>; bindings = <&mESC>; };
-            leftup   { sequence = <E N T>; bindings = <&mENT>; };
+            leftdown { 
+                sequence = <E S C>; 
+                bindings = <&mESC>; 
+            };
+            leftup   { 
+                sequence = <E N T>; 
+                bindings = <&mENT>; 
+            };
         };
     
         lt_to_layer_0: lt_to_layer_0 {
