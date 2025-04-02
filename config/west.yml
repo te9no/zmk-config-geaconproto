@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: te9no
       url-base: https://github.com/te9no
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -24,5 +26,8 @@ manifest:
     - name: zmk-dongle-display
       remote: te9no
       revision: test
+    - name: zmk-leader-key
+      remote: urob
+      revision: v0.2.1 # set to same as ZMK version above
   self:
     path: config
