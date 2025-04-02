@@ -12,4 +12,6 @@ jobs:
     with:
       # Optionally choose the toolchain to use: Zephyr SDK (default) or GNU Arm
       # Embedded ('gnuarmemb'). The latter results in slightly faster builds.
-      toolchain: zephyr
+      # toolchain: zephyr
+      toolchain: gnuarmemb
+      
