@@ -6,7 +6,7 @@ if SHIELD_GEACON
         default y
         
     config ZMK_SPLIT_ROLE_CENTRAL
-        default n
+        default y
 
     config ZMK_SPLIT
         default n
