@@ -48,6 +48,7 @@
                 sequence = <E N T>; 
                 bindings = <&mENT>; 
             };
+            ble { sequence = <B L E>; bindings = <&out OUT_BLE>; };
         };
     
         lt_to_layer_0: lt_to_layer_0 {
