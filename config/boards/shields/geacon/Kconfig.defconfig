@@ -4,6 +4,9 @@ if SHIELD_GEACON
 
     config SPI
         default y
+        
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
 
     config ZMK_SPLIT
         default y
