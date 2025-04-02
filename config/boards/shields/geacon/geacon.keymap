@@ -22,6 +22,16 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+        mESC: mESC {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>;
+        };
+        mENT: mENT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER>;
+        };
     };
 
 
@@ -29,8 +39,8 @@
         leader1: leader1 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
-            leftdown { sequence = <E S C>; bindings = <&kp ESC>; };
-            leftup   { sequence = <E N T>; bindings = <&kp ENTER>; };
+            leftdown { sequence = <E S C>; bindings = <&mESC>; };
+            leftup   { sequence = <E N T>; bindings = <&mENT>; };
         };
     
         lt_to_layer_0: lt_to_layer_0 {
