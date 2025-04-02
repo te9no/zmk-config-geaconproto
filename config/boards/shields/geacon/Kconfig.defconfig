@@ -6,10 +6,10 @@ if SHIELD_GEACON
         default y
         
     config ZMK_SPLIT_ROLE_CENTRAL
-        default y
+        default n
 
     config ZMK_SPLIT
-        default y
+        default n
 
     if ZMK_DISPLAY
         config I2C
