@@ -11,9 +11,6 @@ if SHIELD_GEACON
     config ZMK_SPLIT
         default y
 
-    config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
-        default 1
-
     if ZMK_DISPLAY
         config I2C
             default y
