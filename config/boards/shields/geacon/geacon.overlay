@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include "geacon_pinctrl.dtsi"
 #include "geacon.dtsi"
-#include <behaviors/rgbled_widget.dtsi>
 
 &spi0 {
     status = "okay";
