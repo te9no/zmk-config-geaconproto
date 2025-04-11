@@ -7,9 +7,7 @@ include:
 #    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: seeeduino_xiao_ble
     # shield: geacon rgbled_adapter dongle_display
-    shield: geacon rgbled_adapter dongle_display_view_seeeduino_xiao_ble
-    snippet: zmk-usb-logging studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    shield: geacon
   - board: seeeduino_xiao_ble
     shield: settings_reset
     
