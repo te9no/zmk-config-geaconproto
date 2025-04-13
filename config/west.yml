@@ -27,9 +27,6 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: main
-    # - name: zmk-dongle-display
-    #   remote: te9no
-    #   revision: test
     - name: zmk-dongle-display-view
       remote: te9no
       revision: main
