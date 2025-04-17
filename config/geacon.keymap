@@ -55,31 +55,37 @@
         pmw_250: pmw_250 {
             compatible = "zmk,behavior-pmw3610-config";
             polling_rate = <250>;
+            #binding-cells = <0>;
         };
         
         pmw_125: pmw_125 {
             compatible = "zmk,behavior-pmw3610-config";
             polling_rate = <125>;
+            #binding-cells = <0>;
         };
         
         pmw_400: pmw_400 {
             compatible = "zmk,behavior-pmw3610-config";
             cpi = <400>;
+            #binding-cells = <0>;
         };
 
         pmw_600: pmw_600 {
             compatible = "zmk,behavior-pmw3610-config";
             cpi = <600>;
+            #binding-cells = <0>;
         };
 
         pmw_800: pmw_800 {
             compatible = "zmk,behavior-pmw3610-config";
             cpi = <800>;
+            #binding-cells = <0>;
         };
         
         pmw_160: pmw_160 {
             compatible = "zmk,behavior-pmw3610-config";
             cpi = <1600>;
+            #binding-cells = <0>;
         };
 
         toJIS: toJIS {
