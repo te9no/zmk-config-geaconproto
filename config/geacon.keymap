@@ -64,13 +64,13 @@
             #binding-cells = <0>;
         };
         
-        pmw_400: pmw_800 {
+        pmw_400: pmw_400 {
             compatible = "zmk,behavior-pmw3610-config";
             cpi = <400>;
             #binding-cells = <0>;
         };
 
-        pmw_600: pmw_800 {
+        pmw_600: pmw_600 {
             compatible = "zmk,behavior-pmw3610-config";
             cpi = <600>;
             #binding-cells = <0>;
