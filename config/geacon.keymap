@@ -54,13 +54,13 @@
     
         pmw_250: pmw_250 {
             compatible = "zmk,behavior-pmw3610-config";
-            polling_rate = <250>;
+            polling-rate = <250>;
             #binding-cells = <0>;
         };
         
         pmw_125: pmw_125 {
             compatible = "zmk,behavior-pmw3610-config";
-            polling_rate = <125>;
+            polling-rate = <125>;
             #binding-cells = <0>;
         };
         
